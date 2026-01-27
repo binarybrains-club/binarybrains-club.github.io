@@ -8,5 +8,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://binarybrains-club.github.io/binarybrains-upiicsa.github.io/",
+  site: "https://binarybrains-club.github.io/",
 });
