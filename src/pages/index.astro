@@ -16,7 +16,7 @@ const CURRENT_DATE = new Date(
 const repositories = await getCollection("repositories");
 const events = (await getCollection("events"))
   .filter(({ data }) =>
-    data.eventDates.some((date) => new Date(date.date) >= CURRENT_DATE),
+    data.eventDates.some((date) => new Date(date.date) >= CURRENT_DATE)
   )
   .map((event) => ({
     ...event,
@@ -64,21 +64,21 @@ const events = (await getCollection("events"))
     >
       <div class="flex flex-col gap-4 items-center">
         {
-          events.length === 0 ? (
+                    events.length === 0 ? (
             <p class="text-[#B1D9EB] text-2xl">
               No hay eventos próximos. Vuelve pronto :3
             </p>
-          ) : (
-            events.map((event) => (
-              <EventCard
-                title={event.data.title}
-                link={event.data.link}
-                address={event.data.address}
-                eventDates={event.eventDates}
-                imagePath={event.data.imagePath}
-                content={event.body}
-              />
-            ))
+          ): (
+                     events.map((event) => (
+            <EventCard
+              title={event.data.title}
+              link={event.data.link}
+              address={event.data.address}
+              eventDates={event.eventDates}
+              imagePath={event.data.imagePath}
+              content={event.body}
+            />
+          ))
           )
         }
       </div>
@@ -94,15 +94,15 @@ const events = (await getCollection("events"))
         {
           repositories.length > 0
             ? repositories.map(({ data, body }) => (
-                <RepositoryCard
-                  title={data.title}
-                  description={body ?? ""}
-                  technologies={data.technologies}
-                  imagePath={data.imagePath}
-                  link={data.link}
-                />
-              ))
-            : null
+            <RepositoryCard
+              title={data.title}
+              description={body ?? ""}
+              technologies={data.technologies}
+              imagePath={data.imagePath}
+              link={data.link}
+            />
+          ))
+          : null
         }
       </div>
     </SectionContainer>
