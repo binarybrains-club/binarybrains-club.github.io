@@ -5,7 +5,8 @@ import "../styles/global.css";
 const DEFAULT_KEYWORDS = ["binarybrains", "upiicsa", "algoritigmia"];
 
 const ogImage = {
-  path: "https://binarybrains-upiicsa.github.io/images/binary-brains-banner.png",
+  path:
+    "https://binarybrains-upiicsa.github.io/images/binary-brains-banner.png",
   alt: "A logo of a blue brain digitalized",
 };
 
@@ -70,9 +71,10 @@ const {
 
 <script>
   const cursor = document.getElementById("cursor");
-  globalThis.addEventListener("mousemove", (event: MouseEvent) => {
-    if (cursor) {
-      cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
-    }
-  });
+    globalThis.addEventListener("mousemove", (event: MouseEvent) => {
+      if (cursor) {
+        cursor.style.transform =
+          `translate(${event.clientX}px, ${event.clientY}px)`;
+      }
+    });
 </script>
