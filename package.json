@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@tabler/icons-preact": "^3.40.0",
     "@tailwindcss/vite": "^4.0.14",
     "astro": "5.18.0",
     "@astrojs/check": "0.9.6",
